@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <linearGradient id="htmlGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+    <linearGradient id="codeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Grid Pattern -->
+  <g stroke="#ffffff" stroke-opacity="0.05" stroke-width="1">
+    <line x1="0" y1="90" x2="800" y2="90" />
+    <line x1="0" y1="180" x2="800" y2="180" />
+    <line x1="0" y1="270" x2="800" y2="270" />
+    <line x1="0" y1="360" x2="800" y2="360" />
+    <line x1="160" y1="0" x2="160" y2="450" />
+    <line x1="320" y1="0" x2="320" y2="450" />
+    <line x1="480" y1="0" x2="480" y2="450" />
+    <line x1="640" y1="0" x2="640" y2="450" />
+  </g>
+
+  <!-- Decorative Glow Circles -->
+  <circle cx="150" cy="120" r="140" fill="#6366f1" opacity="0.15" filter="url(#glow)" />
+  <circle cx="650" cy="320" r="160" fill="#f97316" opacity="0.12" filter="url(#glow)" />
+
+  <!-- Code Editor Window Mockup -->
+  <g transform="translate(180, 55)">
+    <!-- Window Body -->
+    <rect width="440" height="340" rx="12" fill="#0b0f19" stroke="#334155" stroke-width="1.5" />
+    <!-- Window Header -->
+    <path d="M0,12 Q0,0 12,0 L428,0 Q440,0 440,12 L440,36 L0,36 Z" fill="#1e293b" />
+    <!-- Window Dots -->
+    <circle cx="20" cy="18" r="5" fill="#ef4444" />
+    <circle cx="36" cy="18" r="5" fill="#f59e0b" />
+    <circle cx="52" cy="18" r="5" fill="#10b981" />
+    <text x="220" y="22" fill="#94a3b8" font-family="'Courier New', monospace" font-size="12" text-anchor="middle">index.html - HTML5 Architecture</text>
+
+    <!-- Code Lines -->
+    <g font-family="'Courier New', monospace" font-size="13" font-weight="bold">
+      <text x="24" y="66" fill="#ef4444">&lt;!DOCTYPE <tspan fill="#f59e0b">html</tspan>&gt;</text>
+      <text x="24" y="94" fill="#3b82f6">&lt;<tspan fill="#60a5fa">html</tspan> <tspan fill="#a78bfa">lang</tspan>=<tspan fill="#34d399">"en"</tspan>&gt;</text>
+      <text x="44" y="122" fill="#3b82f6">&lt;<tspan fill="#60a5fa">head</tspan>&gt;</text>
+      <text x="64" y="150" fill="#3b82f6">&lt;<tspan fill="#60a5fa">title</tspan>&gt;<tspan fill="#f1f5f9">HTML Basics</tspan>&lt;/<tspan fill="#60a5fa">title</tspan>&gt;</text>
+      <text x="44" y="178" fill="#3b82f6">&lt;/<tspan fill="#60a5fa">head</tspan>&gt;</text>
+      <text x="44" y="206" fill="#3b82f6">&lt;<tspan fill="#60a5fa">body</tspan>&gt;</text>
+      <text x="64" y="234" fill="#f97316">&lt;<tspan fill="#fb923c">header</tspan>&gt; <tspan fill="#94a3b8">&lt;!-- Navigation --&gt;</tspan> &lt;/<tspan fill="#fb923c">header</tspan>&gt;</text>
+      <text x="64" y="262" fill="#10b981">&lt;<tspan fill="#34d399">main</tspan>&gt; <tspan fill="#94a3b8">&lt;!-- Content &amp; Media --&gt;</tspan> &lt;/<tspan fill="#34d399">main</tspan>&gt;</text>
+      <text x="64" y="290" fill="#f97316">&lt;<tspan fill="#fb923c">footer</tspan>&gt; <tspan fill="#94a3b8">&lt;!-- Footer Info --&gt;</tspan> &lt;/<tspan fill="#fb923c">footer</tspan>&gt;</text>
+      <text x="44" y="316" fill="#3b82f6">&lt;/<tspan fill="#60a5fa">body</tspan>&gt;</text>
+    </g>
+  </g>
+
+  <!-- HTML5 Floating Badge Left -->
+  <g transform="translate(60, 200)" filter="url(#glow)">
+    <rect width="80" height="80" rx="16" fill="url(#htmlGrad)" />
+    <text x="40" y="48" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="28" text-anchor="middle">&lt;/&gt;</text>
+    <text x="40" y="68" fill="#ffedd5" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="11" text-anchor="middle">HTML5</text>
+  </g>
+
+  <!-- Tags Floating Badge Right -->
+  <g transform="translate(660, 140)" filter="url(#glow)">
+    <rect width="80" height="80" rx="16" fill="url(#codeGrad)" />
+    <text x="40" y="44" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="22" text-anchor="middle">TAGS</text>
+    <text x="40" y="64" fill="#e0e7ff" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="10" text-anchor="middle">ELEMENTS</text>
+  </g>
+</svg>

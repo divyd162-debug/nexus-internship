@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Week 1 HTML Basics - Practice Question 2: Student Names, Roll Numbers, and Marks Table with multi-page navigation.">
+    <title>HTML Basics | Page 2 - Student Records Table</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Shared Navigation Bar (Practice Question 4) -->
+    <header class="site-header">
+        <div class="container nav-bar">
+            <a href="index.html" class="brand-title">
+                <span>&lt;/&gt; Web Dev Week 1</span>
+                <span class="brand-tag">HTML Basics</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Page 1: Overview &amp; Media</a></li>
+                    <li><a href="table.html" class="active">Page 2: Student Records Table</a></li>
+                    <li><a href="form.html">Page 3: Registration Form</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Page Introduction -->
+        <header class="page-intro">
+            <span class="question-badge">Practice Question 2 &amp; 4</span>
+            <h1 class="page-title">Student Records &amp; Marks Table</h1>
+            <p class="page-subtitle">
+                Demonstrating semantic tabular data presentation using <code>&lt;table&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>, <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code>.
+            </p>
+        </header>
+
+        <!-- Table Card -->
+        <section class="card">
+            <h2 class="card-title">
+                <span class="icon">&#128202;</span> Academic Performance &bull; Semester Assessment
+            </h2>
+            <p>
+                Below is a structured record of engineering students, their assigned roll numbers, marks obtained across technical modules, aggregate percentage, and performance status.
+            </p>
+
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <caption>Academic Marks Summary - Department of AI &amp; Data Engineering</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Roll Number</th>
+                            <th scope="col">Student Name</th>
+                            <th scope="col">Web Dev (100)</th>
+                            <th scope="col">Data Structures (100)</th>
+                            <th scope="col">AI / ML (100)</th>
+                            <th scope="col">Total (300)</th>
+                            <th scope="col">Percentage</th>
+                            <th scope="col">Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>TCET-2024-001</strong></td>
+                            <td>Divy Desai</td>
+                            <td>96</td>
+                            <td>94</td>
+                            <td>98</td>
+                            <td><strong>288</strong></td>
+                            <td>96.0%</td>
+                            <td><span class="badge-grade grade-a">A+ (Distinction)</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>TCET-2024-002</strong></td>
+                            <td>Aarav Sharma</td>
+                            <td>88</td>
+                            <td>91</td>
+                            <td>85</td>
+                            <td><strong>264</strong></td>
+                            <td>88.0%</td>
+                            <td><span class="badge-grade grade-a">A (Distinction)</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>TCET-2024-003</strong></td>
+                            <td>Sneha Patil</td>
+                            <td>92</td>
+                            <td>86</td>
+                            <td>89</td>
+                            <td><strong>267</strong></td>
+                            <td>89.0%</td>
+                            <td><span class="badge-grade grade-a">A (Distinction)</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>TCET-2024-004</strong></td>
+                            <td>Rohan Verma</td>
+                            <td>78</td>
+                            <td>82</td>
+                            <td>80</td>
+                            <td><strong>240</strong></td>
+                            <td>80.0%</td>
+                            <td><span class="badge-grade grade-b">B+ (First Class)</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>TCET-2024-005</strong></td>
+                            <td>Pooja Iyer</td>
+                            <td>85</td>
+                            <td>79</td>
+                            <td>84</td>
+                            <td><strong>248</strong></td>
+                            <td>82.6%</td>
+                            <td><span class="badge-grade grade-b">B+ (First Class)</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>TCET-2024-006</strong></td>
+                            <td>Aditya Kulkarni</td>
+                            <td>90</td>
+                            <td>88</td>
+                            <td>91</td>
+                            <td><strong>269</strong></td>
+                            <td>89.6%</td>
+                            <td><span class="badge-grade grade-a">A (Distinction)</span></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2"><strong>Class Average / Summary</strong></td>
+                            <td>88.1</td>
+                            <td>86.6</td>
+                            <td>87.8</td>
+                            <td><strong>262.6</strong></td>
+                            <td><strong>87.5%</strong></td>
+                            <td><span class="badge-grade grade-a">All Passed</span></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <!-- Multi-page Navigation Callout (Practice Question 4) -->
+        <div class="nav-helper">
+            <div class="nav-helper-text">
+                <h4>Practice Question 4: Multi-Page Navigation</h4>
+                <p>Switch between the overview, marks table, and registration form pages.</p>
+            </div>
+            <div class="nav-buttons">
+                <a href="index.html" class="nav-pill">
+                    &larr; Back to Page 1: Overview
+                </a>
+                <a href="form.html" class="nav-pill">
+                    Go to Page 3: Registration Form &rarr;
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Nexus Internship &bull; Divy Desai &bull; Week 1 HTML Basics</p>
+            <div>
+                <a href="index.html">Page 1: Overview</a> &bull;
+                <a href="table.html">Page 2: Table</a> &bull;
+                <a href="form.html">Page 3: Form</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

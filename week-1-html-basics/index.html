@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Week 1 HTML Basics - Practice Question 1: Heading, Paragraph, and Image with 3-page navigation.">
+    <title>HTML Basics | Page 1 - Heading, Paragraph & Image</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Shared Navigation Bar (Practice Question 4) -->
+    <header class="site-header">
+        <div class="container nav-bar">
+            <a href="index.html" class="brand-title">
+                <span>&lt;/&gt; Web Dev Week 1</span>
+                <span class="brand-tag">HTML Basics</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Page 1: Overview &amp; Media</a></li>
+                    <li><a href="table.html">Page 2: Student Records Table</a></li>
+                    <li><a href="form.html">Page 3: Registration Form</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Page Introduction -->
+        <header class="page-intro">
+            <span class="question-badge">Practice Question 1 &amp; 4</span>
+            <h1 class="page-title">HTML Page Structure, Heading, Paragraph &amp; Image</h1>
+            <p class="page-subtitle">
+                Demonstrating foundational HTML elements: document tree, typography hierarchies, semantic tags, attributes, and multi-page site navigation.
+            </p>
+        </header>
+
+        <!-- Section 1: Headings & Paragraphs -->
+        <section class="card">
+            <h2 class="card-title">
+                <span class="icon">&#128214;</span> 1. HTML Headings and Paragraph Structure
+            </h2>
+            <p>
+                HyperText Markup Language (HTML) forms the backbone of any web application. A well-structured webpage utilizes semantic elements such as <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;footer&gt;</code> to convey meaning to browsers, screen readers, and search engine indexers.
+            </p>
+            <br>
+            <p>
+                Headings range from <code>&lt;h1&gt;</code> (the highest conceptual rank) through <code>&lt;h6&gt;</code>. Paragraphs defined by <code>&lt;p&gt;</code> group cohesive blocks of text, separating thoughts cleanly with predictable vertical margins.
+            </p>
+
+            <!-- Image Demonstration (Question 1) -->
+            <div class="hero-image-box">
+                <img 
+                    src="assets/html5-illustration.svg" 
+                    alt="HTML5 Page Architecture Diagram showing doctype, head, body, header, main, and footer hierarchy" 
+                    width="800" 
+                    height="450"
+                    loading="lazy">
+                <div class="image-caption">
+                    <strong>Figure 1.1:</strong> Semantic Anatomy of an HTML5 Document and Core Element Tree.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Core Topics Covered -->
+        <section class="card">
+            <h3 class="card-title">
+                <span class="icon">&#127919;</span> 2. Covered HTML Fundamentals
+            </h3>
+            
+            <div class="topics-grid">
+                <article class="topic-item">
+                    <h4>Tags vs. Elements vs. Attributes</h4>
+                    <p>
+                        A <strong>tag</strong> is the syntax bracket (e.g. <code>&lt;p&gt;</code>), an <strong>element</strong> comprises opening tag, content, and closing tag, while <strong>attributes</strong> provide extra configuration (e.g. <code>id</code>, <code>class</code>, <code>src</code>, <code>href</code>).
+                    </p>
+                    <ul class="styled-list">
+                        <li>Element syntax: <code>&lt;tag attr="val"&gt;Content&lt;/tag&gt;</code></li>
+                        <li>Self-closing tags: <code>&lt;img&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;br&gt;</code></li>
+                    </ul>
+                </article>
+
+                <article class="topic-item">
+                    <h4>Lists &amp; Organization</h4>
+                    <p>
+                        HTML offers both ordered and unordered sequences for grouping related items cleanly.
+                    </p>
+                    <ol class="styled-list">
+                        <li>Unordered lists with <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code></li>
+                        <li>Ordered numbered lists with <code>&lt;ol&gt;</code></li>
+                        <li>Description lists with <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>, <code>&lt;dd&gt;</code></li>
+                    </ol>
+                </article>
+
+                <article class="topic-item">
+                    <h4>Hyperlinks &amp; Multi-Page Navigation</h4>
+                    <p>
+                        Using anchor tags <code>&lt;a href="..."&gt;</code> allows seamless routing across internal pages, document sections, and external web resources.
+                    </p>
+                    <ul class="styled-list">
+                        <li>Internal page jumps via element IDs</li>
+                        <li>Relative path navigation between local HTML files</li>
+                        <li>External links with <code>target="_blank"</code></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Multi-page Navigation Callout (Practice Question 4) -->
+        <div class="nav-helper">
+            <div class="nav-helper-text">
+                <h4>Practice Question 4: Multi-Page Navigation</h4>
+                <p>Move seamlessly between the 3 connected web pages created for Week 1.</p>
+            </div>
+            <div class="nav-buttons">
+                <a href="table.html" class="nav-pill">
+                    Go to Page 2: Student Table &rarr;
+                </a>
+                <a href="form.html" class="nav-pill">
+                    Go to Page 3: Registration Form &rarr;
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Nexus Internship &bull; Divy Desai &bull; Week 1 HTML Basics</p>
+            <div>
+                <a href="index.html">Page 1: Overview</a> &bull;
+                <a href="table.html">Page 2: Table</a> &bull;
+                <a href="form.html">Page 3: Form</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

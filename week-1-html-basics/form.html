@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Week 1 HTML Basics - Practice Question 3: Student Registration Form with input, select, and submit buttons.">
+    <title>HTML Basics | Page 3 - Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Shared Navigation Bar (Practice Question 4) -->
+    <header class="site-header">
+        <div class="container nav-bar">
+            <a href="index.html" class="brand-title">
+                <span>&lt;/&gt; Web Dev Week 1</span>
+                <span class="brand-tag">HTML Basics</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Page 1: Overview &amp; Media</a></li>
+                    <li><a href="table.html">Page 2: Student Records Table</a></li>
+                    <li><a href="form.html" class="active">Page 3: Registration Form</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Page Introduction -->
+        <header class="page-intro">
+            <span class="question-badge">Practice Question 3 &amp; 4</span>
+            <h1 class="page-title">Student Registration Form</h1>
+            <p class="page-subtitle">
+                Demonstrating interactive user input handling using <code>&lt;form&gt;</code>, various <code>&lt;input&gt;</code> types, <code>&lt;select&gt;</code> dropdowns, radio/checkbox controls, and <code>submit</code> buttons.
+            </p>
+        </header>
+
+        <!-- Registration Form Card -->
+        <section class="card">
+            <h2 class="card-title">
+                <span class="icon">&#128221;</span> Course Enrollment &amp; Internship Registration
+            </h2>
+            <p style="margin-bottom: 24px;">
+                Please fill in your details below to register for the Web Development and AI Training Track.
+            </p>
+
+            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Registration submitted successfully! Welcome aboard, ' + document.getElementById('fullName').value + '.');">
+                <div class="form-grid">
+                    <!-- Full Name Input -->
+                    <div class="form-field">
+                        <label for="fullName">Full Name <span class="required">*</span></label>
+                        <input type="text" id="fullName" name="fullName" placeholder="e.g. Divy Desai" required autocomplete="name">
+                    </div>
+
+                    <!-- Email Input -->
+                    <div class="form-field">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="e.g. divyd162@gmail.com" required autocomplete="email">
+                    </div>
+
+                    <!-- Phone Number Input -->
+                    <div class="form-field">
+                        <label for="phone">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="+91 8369889291" required pattern="[0-9+ -]{10,15}">
+                    </div>
+
+                    <!-- Date of Birth Input -->
+                    <div class="form-field">
+                        <label for="dob">Date of Birth <span class="required">*</span></label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+
+                    <!-- Program Selection (Select Dropdown) -->
+                    <div class="form-field">
+                        <label for="department">Academic Department / Branch <span class="required">*</span></label>
+                        <select id="department" name="department" required>
+                            <option value="" disabled selected>-- Select Your Department --</option>
+                            <option value="aiml">Artificial Intelligence &amp; Machine Learning (AIML)</option>
+                            <option value="cs">Computer Engineering</option>
+                            <option value="it">Information Technology</option>
+                            <option value="ds">Data Science &amp; Analytics</option>
+                            <option value="entc">Electronics &amp; Telecommunication</option>
+                        </select>
+                    </div>
+
+                    <!-- Year of Study (Select Dropdown) -->
+                    <div class="form-field">
+                        <label for="academicYear">Year of Study <span class="required">*</span></label>
+                        <select id="academicYear" name="academicYear" required>
+                            <option value="" disabled selected>-- Select Academic Year --</option>
+                            <option value="1">First Year (FE)</option>
+                            <option value="2">Second Year (SE)</option>
+                            <option value="3">Third Year (TE)</option>
+                            <option value="4">Final Year (BE / B.Tech)</option>
+                        </select>
+                    </div>
+
+                    <!-- Gender Radio Buttons -->
+                    <div class="form-field form-full-width">
+                        <label>Gender <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="choice-label">
+                                <input type="radio" name="gender" value="male" required> Male
+                            </label>
+                            <label class="choice-label">
+                                <input type="radio" name="gender" value="female"> Female
+                            </label>
+                            <label class="choice-label">
+                                <input type="radio" name="gender" value="other"> Other / Prefer not to say
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Technical Focus Checkboxes -->
+                    <div class="form-field form-full-width">
+                        <label>Areas of Technical Interest (Select all that apply)</label>
+                        <div class="checkbox-group">
+                            <label class="choice-label">
+                                <input type="checkbox" name="interests" value="html-css" checked> Frontend (HTML, CSS, React)
+                            </label>
+                            <label class="choice-label">
+                                <input type="checkbox" name="interests" value="backend"> Backend &amp; APIs (Node, FastAPI, Flask)
+                            </label>
+                            <label class="choice-label">
+                                <input type="checkbox" name="interests" value="aiml" checked> Machine Learning &amp; LLMs
+                            </label>
+                            <label class="choice-label">
+                                <input type="checkbox" name="interests" value="devops"> DevOps &amp; Cloud (Docker, CI/CD)
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Additional Statement / Notes (Textarea) -->
+                    <div class="form-field form-full-width">
+                        <label for="statement">Statement of Purpose / Goals</label>
+                        <textarea id="statement" name="statement" rows="3" placeholder="Briefly describe what you hope to achieve during this internship..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Form Action Buttons -->
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">
+                        <span>&#10003;</span> Complete Registration
+                    </button>
+                    <button type="reset" class="btn btn-reset">
+                        Reset Form
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Multi-page Navigation Callout (Practice Question 4) -->
+        <div class="nav-helper">
+            <div class="nav-helper-text">
+                <h4>Practice Question 4: Multi-Page Navigation</h4>
+                <p>Return to previous pages or review the student table.</p>
+            </div>
+            <div class="nav-buttons">
+                <a href="index.html" class="nav-pill">
+                    &larr; Back to Page 1: Overview
+                </a>
+                <a href="table.html" class="nav-pill">
+                    Go to Page 2: Student Table &rarr;
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Nexus Internship &bull; Divy Desai &bull; Week 1 HTML Basics</p>
+            <div>
+                <a href="index.html">Page 1: Overview</a> &bull;
+                <a href="table.html">Page 2: Table</a> &bull;
+                <a href="form.html">Page 3: Form</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
